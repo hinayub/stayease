@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['email'])) {
     $res = $conn->query($sql);
     if ($res && $res->num_rows > 0) {
         echo json_encode(['error' => "Username already exists."]);
+        echo ("here is the hotel");
         exit();
     }
 
