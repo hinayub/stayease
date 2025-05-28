@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="bg-white">
+      <div class="d-flex justify-content-between">
+        <div class="mx-5 mt-2" id="logoBox">
+          <a class="navbar-brand" href="index.html">
+            <img src="logo.png" alt="Bootstrap" width="80" height="60" />
+          </a>
+        </div>
+        <div class="loginBox mx-5">
+          <span id="user"></span>
+          <button
+            type="button"
+            id="loginButton"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal"
+          >
+            <i class="fas fa-user login-icon"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="col-11 col-lg-9 col-md-10 m-auto">
+      <div id="hotelNameBox">
+        <h3></h3>
+      </div>
+
+      <div class="imgBox d-none d-md-flex">
+        <div class="col-7" id="largeImg">
+          <img id="img-1" />
+        </div>
+        <div class="smallImgBox col-5">
+          <img id="img-2" class="small-Img" />
+          <img id="img-3" class="small-Img" />
+        </div>
+      </div>
+
+      <div
+        id="carouselExampleInterval"
+        class="carousel slide hotelImgCarousel d-block d-md-none"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img id="carouselImg-1" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img id="carouselImg-2" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img id="carouselImg-3" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="hotelDetail row col-11 col-lg-9 col-md-10 m-auto mb-4">
+      <div class="hotelProperty col-12 col-md-6">
+        <h4 id="hotelRating"></h4>
+        <div id="hostInfo">
+          <div id="hostBox">
+            <img src="" alt="host image" height="40px" width="40px" />
+            <span id="hostName"></span>
+          </div>
+        </div>
+        <div class="hotelServices">
+          <div id="service_1" class="services"></div>
+          <div id="service_2" class="services"></div>
+          <div id="service_3" class="services"></div>
+          <div id="service_4" class="services"></div>
+        </div>
+        <div id="hotelPraisePara">
+          <h3 style="padding-bottom: 15px; padding-top: 30px">
+            about this place
+          </h3>
+          <p></p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="hotelPageCard">
+          <div class="hotelRent">
+            <h3 id="rent"></h3>
+            <span>night</span>
+          </div>
+
+          <div class="hotelPagereservationDate">
+            <div id="hotelPageCheckInBox">
+              <div id="label" style="color: black">CHECK-IN</div>
+              <input
+                class="border-0"
+                type="date"
+                id="checkIn"
+                placeholder="Add dates"
+                required
+              />
+            </div>
+            <div id="hotelPageCheckOutBox">
+              <div id="label" style="color: black">CHECTOUT</div>
+              <input
+                class="border-0"
+                id="checkOut"
+                type="date"
+                placeholder="Add Date"
+                required
+              />
+            </div>
+          </div>
+          <div id="hotelPageGuestBox">
+            <div id="label" style="color: black">GUESTS</div>
+            <input
+              class="border-0"
+              type="text"
+              placeholder="Add guest"
+              id="totalGuest"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <button
+            type="button"
+            id="reserve"
+            data-bs-toggle="modal"
+            data-bs-target="#paymentModal"
+          >
+            Reserve
+          </button>
+
+          <span id="paymentStatus">You won't be charged yet</span>
+          <div class="stayDues">
+            <span id="daysStay"></span>
+            <span id="stayAmount"></span>
+          </div>
+          <div class="stayEaseDues">
+            <span id="stayEaseText">StayEase service fee</span>
+            <span id="stayEaseFee">$2,100</span>
+          </div>
+          <div class="totalrentBox">
+            <span id="totalRentText">Total before taxes </span>
+            <span id="totalRent"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="paymentModal"
+      tabindex="-1"
+      aria-labelledby="paymentModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="paymentModalLabel">
+              Debit Card Payment
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="card-container">
+              <label for="cardNumber">Card Number</label>
+              <input
+                type="text"
+                id="cardNumber"
+                placeholder="1234 5678 9012 3456"
+                maxlength="19"
+              />
+              <span class="error" id="cardNumberError"></span>
+
+              <label for="cardHolder">Card Holder Name</label>
+              <input type="text" id="cardHolder" placeholder="John Doe" />
+              <span class="error" id="cardHolderError"></span>
+
+              <div class="row">
+                <div style="flex: 1">
+                  <label for="expiry">Expiry</label>
+                  <input
+                    type="text"
+                    id="expiry"
+                    placeholder="MM/YY"
+                    maxlength="5"
+                  />
+                  <span class="error" id="expiryError"></span>
+                </div>
+                <div style="flex: 1">
+                  <label for="cvv">CVV</label>
+                  <input
+                    type="password"
+                    id="cvv"
+                    placeholder="123"
+                    maxlength="3"
+                  />
+                  <span class="error" id="cvvError"></span>
+                </div>
+              </div>
+
+              <button class="btn btn-success w-100 mt-4" id="makePayment">
+                Pay Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row col-11 col-lg-9 col-md-10 m-auto mb-4">
+      <input placeholder="Add feedback" type="text" id="inputfeedback" />
+    </div>
+
+    <script src="hotel-script.js"></script>
+  </body>
+</html>
