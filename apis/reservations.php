@@ -1,6 +1,7 @@
 <?php
 include '../config/db.php';
 header('Content-Type: application/json');
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $checkIn = $_POST['checkIn'];
     $checkOut = $_POST['checkOut'];
