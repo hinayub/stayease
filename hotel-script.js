@@ -216,4 +216,70 @@ window.onload = async function () {
         alert(error);
       });
   }
+  cancelbtn = document.getElementById("cancelBtn");
+  cancelbtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    inputfeedback = document.getElementById("inputfeedback");
+    inputfeedback.value = "";
+  });
+
+  function addFeedbackDiv(user, enterfeedback) {
+    const outerDiv = document.createElement("div");
+    outerDiv.className = "feedbackItem";
+
+    const feedback = document.createElement("div");
+    feedback.id = "feedback";
+    feedback.textContent = enterfeedback;
+
+    const feedbackuser = document.createElement("div");
+    feedbackuser.id = "feedbackuser";
+    feedbackuser.textContent = `@${user}`;
+
+    outerDiv.appendChild(feedbackuser);
+    outerDiv.appendChild(feedback);
+
+    const feedbackBox = document.querySelector(".feedbackBox");
+    feedbackBox.appendChild(outerDiv);
+  }
+
+  commentbtn = document.getElementById("commentBtn");
+
+  commentbtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("btn clicked");
+    inputfeedback = document.getElementById("inputfeedback").value;
+    let formData = new FormData();
+    formData.append("hotelId", carouselId);
+    formData.append("user", user);
+    formData.append("feedback", inputfeedback);
+    fetch("apis/feedback.php", {
+      method: "POST",
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        document.getElementById("inputfeedback").value = "";
+        addFeedbackDiv(user, inputfeedback);
+      })
+
+      .catch((res) => {
+        console.log(res.json());
+      });
+  });
+
+  fetch(`apis/feedback.php?hotelId=${carouselId}`, {
+    method: "GET",
+  })
+    .then((res) => res.json())
+    .then((comment) => {
+      console.log(comment);
+      comment.forEach((item) => {
+        addFeedbackDiv(item.usermail, item.feedback);
+      });
+    })
+
+    .catch((error) => {
+      console.log(error.json());
+    });
 };

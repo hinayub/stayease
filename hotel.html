@@ -257,8 +257,14 @@
         </div>
       </div>
     </div>
-    <div class="row col-11 col-lg-9 col-md-10 m-auto mb-4">
-      <input placeholder="Add feedback" type="text" id="inputfeedback" />
+    <div class="row col-11 col-lg-9 col-md-10 m-auto mb-4 feedbackBox">
+      <form class="feedbackform">
+        <input placeholder="Add feedback" type="text" id="inputfeedback" />
+        <div id="feedbackBtn">
+          <button type="button" id="commentBtn">Comment</button>
+          <button type="button" id="cancelBtn">Cancel</button>
+        </div>
+      </form>
     </div>
 
     <script src="hotel-script.js"></script>

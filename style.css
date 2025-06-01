@@ -400,3 +400,50 @@ h5 {
 #subtract:hover {
   border: solid 1.5px black;
 }
+#inputfeedback {
+  border: none;
+  border-bottom: solid rgb(180, 177, 177) 2px;
+}
+#inputfeedback:focus {
+  border-bottom: solid black 2px;
+}
+#feedbackBtn {
+  padding-top: 10px;
+  text-align: right;
+}
+#commentBtn {
+  border: none;
+  background-color: white;
+  font-weight: bold;
+  border-radius: 15px;
+  height: 35px;
+  width: 100px;
+}
+#commentBtn:hover {
+  background-color: #e4e1e1;
+}
+#cancelBtn {
+  border: none;
+  background-color: white;
+  font-weight: bold;
+  border-radius: 15px;
+  height: 35px;
+  width: 80px;
+}
+#cancelBtn:hover {
+  background-color: #e4e1e1;
+}
+.disabled-btn {
+  cursor: not-allowed;
+}
+.feedbackItem {
+  padding-bottom: 15px;
+}
+#feedbackuser {
+  font-size: 13px;
+  font-weight: bold;
+  color: rgb(56, 123, 198);
+}
+#feedback {
+  overflow-wrap: break-word;
+}
