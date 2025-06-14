@@ -519,3 +519,18 @@ h5 {
   margin-top: 20px;
   font-size: 14px;
 }
+
+.hero-slider {
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.hero-slider .carousel-item {
+  max-height: 400px;
+}
+
+.hero-img {
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}

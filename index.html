@@ -17,14 +17,8 @@
       crossorigin="anonymous"
     ></script>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <link rel="stylesheet" href="style.css" />
@@ -57,32 +51,15 @@
             <div class="bg-white" id="searchBoxRow">
               <div id="destinationBox">
                 <div id="label">Where</div>
-                <input
-                  class="border-0"
-                  id="destination"
-                  placeholder="Search destination"
-                  required
-                />
+                <input class="border-0" id="destination" placeholder="Search destination" required />
               </div>
               <div id="checkInBox">
                 <div id="label">Check in</div>
-                <input
-                  class="border-0"
-                  type="date"
-                  id="checkIn"
-                  placeholder="Add dates"
-                  required
-                />
+                <input class="border-0" type="date" id="checkIn" placeholder="Add dates" required />
               </div>
               <div id="checkOutBox">
                 <div id="label">Check out</div>
-                <input
-                  class="border-0"
-                  id="checkOut"
-                  type="date"
-                  placeholder="Add Date"
-                  required
-                />
+                <input class="border-0" id="checkOut" type="date" placeholder="Add Date" required />
               </div>
               <div id="guestBox">
                 <div id="label">Who</div>
@@ -95,16 +72,8 @@
                   required
                 />
               </div>
-              <div
-                id="searchBox"
-                class="d-flex align-items-center justify-content-center"
-              >
-                <button
-                  id="searchBoxBtn"
-                  class="border-0"
-                  type="submit"
-                  style="background-color: RGB(255, 56, 92)"
-                >
+              <div id="searchBox" class="d-flex align-items-center justify-content-center">
+                <button id="searchBoxBtn" class="border-0" type="submit" style="background-color: RGB(255, 56, 92)">
                   <i class="fas fa-search" style="color: white"></i>
                 </button>
               </div>
@@ -115,9 +84,7 @@
                 <div id="adultBox">
                   <div>
                     <h5 id="adultTitle">Adults</h5>
-                    <div id="adultText" style="color: rgb(97, 95, 95)">
-                      Ages 13 or above
-                    </div>
+                    <div id="adultText" style="color: rgb(97, 95, 95)">Ages 13 or above</div>
                   </div>
 
                   <div class="calculation" id="totalAdult">
@@ -129,9 +96,7 @@
                 <div id="childBox">
                   <div>
                     <h6 id="childTitle">Child</h6>
-                    <div id="childText" style="color: rgb(97, 95, 95)">
-                      Ages 2-12
-                    </div>
+                    <div id="childText" style="color: rgb(97, 95, 95)">Ages 2-12</div>
                   </div>
                   <div class="calculation" id="totalChild">
                     <button type="button" id="add">+</button>
@@ -142,9 +107,7 @@
                 <div id="infantBox">
                   <div>
                     <h5 id="infantTitle">Infants</h5>
-                    <div id="infantText" style="color: rgb(97, 95, 95)">
-                      Under 2
-                    </div>
+                    <div id="infantText" style="color: rgb(97, 95, 95)">Under 2</div>
                   </div>
                   <div class="calculation" id="totalInfant">
                     <button type="button" id="add">+</button>
@@ -159,6 +122,65 @@
       </div>
     </nav>
 
+    <section class="hero-slider">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://center-portugal.transforms.svdcdn.com/production/images/furadouro-hotel-bedroom.jpg?w=1920&h=720&q=100&auto=format&fit=min&dm=1691595640&s=44c5b3a8302a1c72da5c74947411ad87"
+              class="d-block w-100 hero-img"
+              alt="Hotel 1"
+            />
+            <div
+              class="carousel-caption position-absolute top-50 start-50 translate-middle bg-dark bg-opacity-50 rounded p-3"
+            >
+              <h2 class="h3 fw-bold">Luxury Stay in Bali</h2>
+              <p class="small">Tropical views and 5-star comfort await you.</p>
+              <a href="#rentals" class="btn btn-light btn-lg mt-2">Book Now</a>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="https://shawellness.com/wp-content/uploads/2025/05/GENERAL-01-EDIT-LQ-800x300.jpg"
+              class="d-block w-100 hero-img"
+              alt="Hotel 2"
+            />
+            <div
+              class="carousel-caption position-absolute top-50 start-50 translate-middle bg-dark bg-opacity-50 rounded p-3"
+            >
+              <h2 class="h3 fw-bold">City Escape in New York</h2>
+              <p class="small">In the heart of the world's most vibrant city.</p>
+              <a href="#rentals" class="btn btn-light btn-lg mt-2">Book Now</a>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="https://img.easemytrip.com/EMTHotel-266575/w/large/252499_0.jpg"
+              class="d-block w-100 hero-img"
+              alt="Hotel 3"
+            />
+            <div
+              class="carousel-caption position-absolute top-50 start-50 translate-middle bg-dark bg-opacity-50 rounded p-3"
+            >
+              <h2 class="h3 fw-bold">Romantic Paris Getaway</h2>
+              <p class="small">Experience the charm and elegance of Paris.</p>
+              <a href="#rentals" class="btn btn-light btn-lg mt-2">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
     <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -166,21 +188,11 @@
             <div class="" style="border-radius: 1rem">
               <div class="p-5 text-center">
                 <div class="mb-md-5 mt-md-4 pb-5">
-                  <h2
-                    class="fw-bold mb-2 text-uppercase"
-                    style="color: RGB(255, 56, 92)"
-                  >
-                    Login
-                  </h2>
-                  <p class="text-dark-50 mb-5">
-                    Please enter your User name & password!
-                  </p>
+                  <h2 class="fw-bold mb-2 text-uppercase" style="color: RGB(255, 56, 92)">Login</h2>
+                  <p class="text-dark-50 mb-5">Please enter your User name & password!</p>
                   <form id="loginform">
                     <div id="loginerror" style="color: red"></div>
-                    <div
-                      data-mdb-input-init
-                      class="form-outline form-white mb-4"
-                    >
+                    <div data-mdb-input-init class="form-outline form-white mb-4">
                       <input
                         type="text"
                         id="username"
@@ -190,10 +202,7 @@
                       />
                       <label class="form-label" for="username">User name</label>
                     </div>
-                    <div
-                      data-mdb-input-init
-                      class="form-outline form-white mb-4"
-                    >
+                    <div data-mdb-input-init class="form-outline form-white mb-4">
                       <input
                         type="password"
                         id="password"
@@ -243,19 +252,11 @@
             <div class="" style="border-radius: 1rem">
               <div class="p-3 text-center">
                 <div class="mb-md-5 mt-md-4 pb-3">
-                  <h2
-                    class="fw-bold mb-2 text-uppercase"
-                    style="color: RGB(255, 56, 92)"
-                  >
-                    Sign up
-                  </h2>
+                  <h2 class="fw-bold mb-2 text-uppercase" style="color: RGB(255, 56, 92)">Sign up</h2>
                   <p class="text-dark-50 mb-5">Please register yourself!</p>
                   <form id="signupform">
                     <div id="signuperror" style="color: red"></div>
-                    <div
-                      data-mdb-input-init
-                      class="form-outline form-white mb-3"
-                    >
+                    <div data-mdb-input-init class="form-outline form-white mb-3">
                       <input
                         type="text"
                         id="name"
@@ -265,10 +266,7 @@
                       />
                       <label class="form-label" for="name">Name</label>
                     </div>
-                    <div
-                      data-mdb-input-init
-                      class="form-outline form-white mb-3"
-                    >
+                    <div data-mdb-input-init class="form-outline form-white mb-3">
                       <input
                         type="email"
                         id="email"
@@ -279,10 +277,7 @@
                       <label class="form-label" for="email">Email</label>
                     </div>
 
-                    <div
-                      data-mdb-input-init
-                      class="form-outline form-white mb-3"
-                    >
+                    <div data-mdb-input-init class="form-outline form-white mb-3">
                       <input
                         type="text"
                         id="user_name"
@@ -294,10 +289,7 @@
                       <label class="form-label" for="username">User name</label>
                     </div>
 
-                    <div
-                      data-mdb-input-init
-                      class="form-outline form-white mb-3"
-                    >
+                    <div data-mdb-input-init class="form-outline form-white mb-3">
                       <input
                         type="password"
                         id="password"
@@ -331,10 +323,7 @@
       <div class="footer-container">
         <div class="footer-about">
           <h2>StayEase</h2>
-          <p>
-            Your trusted partner for comfortable and affordable hotel bookings
-            worldwide.
-          </p>
+          <p>Your trusted partner for comfortable and affordable hotel bookings worldwide.</p>
         </div>
         <div class="footer-contact">
           <h3>Contact Us</h3>
@@ -344,15 +333,12 @@
         <div class="footer-social">
           <h3>Follow Us</h3>
           <div class="social-icons">
-            <a href="https://www.facebook.com/stayease" target="_blank">
-              <i class="fab fa-facebook-f"></i> Facebook </a
+            <a href="https://www.facebook.com/stayease" target="_blank"> <i class="fab fa-facebook-f"></i> Facebook </a
             ><br />
             <a href="https://www.linkedin.com/company/stayease" target="_blank">
               <i class="fab fa-linkedin-in"></i> LinkedIn </a
             ><br />
-            <a href="https://www.twitter.com/stayease" target="_blank">
-              <i class="fab fa-twitter"></i> Twitter
-            </a>
+            <a href="https://www.twitter.com/stayease" target="_blank"> <i class="fab fa-twitter"></i> Twitter </a>
           </div>
         </div>
       </div>
