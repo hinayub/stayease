@@ -385,7 +385,7 @@ h5 {
   margin-top: 4px;
   display: block;
 }
-/* debit card css */
+
 @media (max-width: 768px) {
   .hotelPageCard {
     width: 100%;
@@ -442,8 +442,80 @@ h5 {
 #feedbackuser {
   font-size: 13px;
   font-weight: bold;
-  color: rgb(56, 123, 198);
+  color: rgb(255, 56, 92);
 }
 #feedback {
   overflow-wrap: break-word;
+}
+#user {
+  font-weight: bold;
+  color: RGB(255, 56, 92);
+}
+#paymentModalLabel {
+  color: rgb(255, 56, 92);
+  font-size: larger;
+  font-weight: 700;
+}
+#searchBox:hover {
+  background-color: rgb(255, 100, 140);
+}
+
+.footer {
+  background-color: #222;
+  color: #ddd;
+  padding: 40px 20px 10px;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-container div {
+  flex: 1 1 220px;
+  margin: 10px;
+}
+
+.footer h2 {
+  color: rgb(255, 56, 92);
+}
+
+.footer h3 {
+  color: rgb(255, 56, 92);
+  margin-bottom: 10px;
+}
+
+.footer a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: rgb(255, 56, 92);
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #444;
+  margin-top: 20px;
+  font-size: 14px;
 }
