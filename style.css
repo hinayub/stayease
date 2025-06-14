@@ -534,3 +534,13 @@ h5 {
   object-fit: cover;
   object-position: center;
 }
+
+.testimonial-user-pic {
+  width: 200px !important;
+  height: 200px !important;
+}
+
+.carousel-indicators button {
+  width: 10px !important;
+  height: 10px !important;
+}
